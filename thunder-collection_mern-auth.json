@@ -1,0 +1,120 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "mern-auth",
+    "dateExported": "2023-12-03T05:13:06.025Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "3356142a-ab12-483f-9ba3-3b9e1cdd731f",
+            "name": "user",
+            "containerId": "",
+            "created": "2023-12-03T04:21:01.028Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "739f8a5c-9787-46a5-a67d-59be2990b07d",
+            "colId": "ee5edcc1-ab4a-47de-ae5c-6b17452d2772",
+            "containerId": "3356142a-ab12-483f-9ba3-3b9e1cdd731f",
+            "name": "Login user POST",
+            "url": "http://localhost:5000/api/users/auth",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-12-03T04:35:32.641Z",
+            "modified": "2023-12-03T04:48:57.405Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"john@email.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "47df2452-cdc4-4cea-8e03-1032ccee4d53",
+            "colId": "ee5edcc1-ab4a-47de-ae5c-6b17452d2772",
+            "containerId": "3356142a-ab12-483f-9ba3-3b9e1cdd731f",
+            "name": "Logout User POST",
+            "url": "http://localhost:5000/api/users/logout",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-12-03T04:44:47.825Z",
+            "modified": "2023-12-03T04:45:05.966Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "55c2a929-fa9c-4fca-b9dd-813f3ddc73a9",
+            "colId": "ee5edcc1-ab4a-47de-ae5c-6b17452d2772",
+            "containerId": "3356142a-ab12-483f-9ba3-3b9e1cdd731f",
+            "name": "fetch user profile",
+            "url": "http://localhost:5000/api/users/profile",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-12-03T04:56:10.609Z",
+            "modified": "2023-12-03T04:56:50.634Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5a632ed4-1875-4dcc-8fef-4a2913f0d326",
+            "colId": "ee5edcc1-ab4a-47de-ae5c-6b17452d2772",
+            "containerId": "3356142a-ab12-483f-9ba3-3b9e1cdd731f",
+            "name": "Update User",
+            "url": "http://localhost:5000/api/users/profile",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-12-03T05:06:21.945Z",
+            "modified": "2023-12-03T05:07:29.878Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "John Update"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "0f71e104-771c-44cf-bc61-6a5e6c0eb276",
+            "colId": "ee5edcc1-ab4a-47de-ae5c-6b17452d2772",
+            "containerId": "3356142a-ab12-483f-9ba3-3b9e1cdd731f",
+            "name": "create new user",
+            "url": "http://localhost:5000/api/users",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-12-03T05:09:33.135Z",
+            "modified": "2023-12-03T05:10:56.997Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Ronny Haku"
+                    },
+                    {
+                        "name": "email",
+                        "value": "as@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "123aaa"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}
