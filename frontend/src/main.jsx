@@ -3,6 +3,11 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomeScreen from "./components/HomeScreen.jsx";
+import store from "./store";
+import { Provider } from "react-redux";
+import ProfileScreen from "./components/ProfileScreen.jsx";
+import PrivateRoute from "./components/PrivateRoute.jsx";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -18,12 +23,17 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<HomeScreen />} />
       <Route path="/login" element={<LoginScreen />} />
       <Route path="/register" element={<RegisterScreen />} />
+      <Route path="" element={<PrivateRoute />}>
+        <Route path="/profile" element={<ProfileScreen />} />
+      </Route>
     </Route>
   )
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </Provider>
 );
